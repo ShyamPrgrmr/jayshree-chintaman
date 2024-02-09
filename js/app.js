@@ -1,4 +1,4 @@
-AOS.init();
+
 
 
 let countDownDate = (new Date(document.getElementById('tampilan-waktu').getAttribute('data-waktu').replace(' ', 'T'))).getTime();
