@@ -206,19 +206,19 @@ const util = (() => {
         AOS.init();
         //audio.play();
 
-        if (localStorage.getItem('alertClosed')) {
+        /*if (localStorage.getItem('alertClosed')) {
             document.getElementById('alertDiv').style.display = 'none';
-        }
+        }*/
 
         opacity('welcome');
-        document.getElementById('tombol-musik').style.display = 'block';
+        //document.getElementById('tombol-musik').style.display = 'block';
         timer();
 
         await confetti({
             origin: { y: 0.8 },
             zIndex: 1057
         });
-        await session.check();
+        //await session.check();
         await animation();
     };
 
