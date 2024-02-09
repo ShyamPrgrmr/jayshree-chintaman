@@ -204,7 +204,7 @@ const util = (() => {
         button.disabled = true;
         document.querySelector('body').style.overflowY = 'scroll';
         AOS.init();
-        audio.play();
+        //audio.play();
 
         if (localStorage.getItem('alertClosed')) {
             document.getElementById('alertDiv').style.display = 'none';
