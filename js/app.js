@@ -1,3 +1,7 @@
+
+
+
+
 const storage = (table) => {
 
     if (!localStorage.getItem(table)) {
@@ -212,7 +216,7 @@ const util = (() => {
 
         opacity('welcome');
         //document.getElementById('tombol-musik').style.display = 'block';
-        timer();
+        
 
         await confetti({
             origin: { y: 0.8 },
@@ -237,6 +241,11 @@ const util = (() => {
         }, timeout);
     };
 
+
+    AOS.init();
+    timer();
+    document.querySelector('body').style.overflowY = 'scroll';
+
     return {
         buka,
         modal,
@@ -246,6 +255,9 @@ const util = (() => {
         show,
         animate
     };
+
+
+
 })();
 
 const progress = (() => {
@@ -987,6 +999,10 @@ const comment = (() => {
             temporaryID = null;
         }
 
+
+
+
+
         resetForm();
     };
 
@@ -1002,3 +1018,7 @@ const comment = (() => {
         kirim,
     };
 })();
+
+
+
+
