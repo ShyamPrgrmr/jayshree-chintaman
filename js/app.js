@@ -1,6 +1,16 @@
+AOS.init();
 
 
+let countDownDate = (new Date(document.getElementById('tampilan-waktu').getAttribute('data-waktu').replace(' ', 'T'))).getTime();
 
+setInterval(() => {
+    let distance = Math.abs(countDownDate - (new Date()).getTime());
+
+    document.getElementById('hari').innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
+    document.getElementById('jam').innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    document.getElementById('menit').innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    document.getElementById('detik').innerText = Math.floor((distance % (1000 * 60)) / 1000);
+}, 1000);
 
 const storage = (table) => {
 
@@ -242,8 +252,7 @@ const util = (() => {
     };
 
 
-    AOS.init();
-    timer();
+    
     document.querySelector('body').style.overflowY = 'scroll';
 
     return {
